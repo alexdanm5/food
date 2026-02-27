@@ -1,0 +1,26 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "> 1%"
+  ],
+  "description": "",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "babel-loader": "^10.0.0",
+    "core-js": "^3.43.0",
+    "json-server": "^1.0.0-beta.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.27.2",
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "webpack-cli": "^6.0.1"
+  }
+}
