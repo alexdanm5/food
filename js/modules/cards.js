@@ -1,7 +1,6 @@
 import { getResurce } from "../services/services";
 
 function cards () {
-    // Classes for cards
 
     class MenuCard {
         constructor(src, alt, title, descr, price, parentSelector) {
