@@ -1,5 +1,4 @@
 function timer (id, deadLine) {
-    // Timer
 
     function getTimeRemaining(endtime) {
         const t = Date.parse(endtime) - Date.parse(new Date());

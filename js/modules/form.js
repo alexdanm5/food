@@ -2,7 +2,6 @@ import { closeModal, openModal } from "./modal";
 import { postData } from "../services/services";
 
 function form(formSelector, modalTaimerId) {
-    // forms
 
     const forms = document.querySelectorAll(formSelector);
 
