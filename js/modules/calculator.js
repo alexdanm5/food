@@ -19,23 +19,31 @@ function calc() {
         localStorage.setItem('ratio', 1.375);
     }
 
-    function initLocalSettings(selector, activeClass) {
+    function initLocalSettings(selector, activeClass, storageKey, attribute) {
         const elements = document.querySelectorAll(selector);
+        const savedValue = localStorage.getItem(storageKey);
 
         elements.forEach(elem => {
             elem.classList.remove(activeClass);
-            if(elem.getAttribute('id') === localStorage.getItem('sex')) {
-                elem.classList.add(activeClass);
-            }
 
-            if (elem.getAttribute('data-ratio') === localStorage.getItem('ratio')) {
+            if (elem.getAttribute(attribute) === savedValue) {
                 elem.classList.add(activeClass);
             }
         });
     }
+    initLocalSettings(
+        '#gender div',
+        'calculating__choose-item_active',
+        'sex',
+        'id'
+    );
 
-    initLocalSettings('#gender div', 'calculating__choose-item_active');
-    initLocalSettings('.calculating__choose_big div', 'calculating__choose-item_active');
+    initLocalSettings(
+        '.calculating__choose_big div',
+        'calculating__choose-item_active',
+        'ratio',
+        'data-ratio'
+    );
 
     function calcTotal() {
         if(!sex || !height || !weight || !age || !ratio) {
